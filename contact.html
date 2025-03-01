@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Ognjen Mičić</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #F7C425;
+            text-align: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Zatamnjivanje za bolju vidljivost teksta */
+            z-index: 1;
+        }
+        header, .container {
+            position: relative;
+            z-index: 2;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .profile-pic {
+            width: 60px;
+            height: 90px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #F7C425;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FFEA70;
+        }
+        .container {
+            padding: 100px 20px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+        .contact-info {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .contact-form {
+            margin-top: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #F7C425;
+            background: rgba(0, 0, 0, 0.8);
+            color: #F7C425;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .contact-form textarea {
+            height: 120px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 24px;
+            background-color: #F7C425;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #FFEA70;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="about_me_190x286.jpg" alt="Ognjen Mičić" class="profile-pic">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        <h2>Let's work together</h2>
+        
+        <div class="contact-info">
+            <p>Ognjen Mičić</p>
+            <p>Hilandarska 24, Istočno Sarajevo</p>
+            <p>Bosnia and Herzegovina</p>
+            <p>📞 +387 66 203 651</p>
+            <p>✉️ info@ommedia.link</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send me a message</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
