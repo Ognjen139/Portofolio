@@ -15,7 +15,6 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Tamni overlay */
 body::before {
     content: "";
     position: absolute;
@@ -27,33 +26,34 @@ body::before {
     z-index: 1;
 }
 
-/* Fade-in animacija */
+/* Fade-in animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Moderni gradient tekst animacija za naslov */
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
 h1 {
     font-size: 48px;
     font-weight: 700;
-    background: linear-gradient(90deg, #F7C425, #FFEA70, #F7C425);
-    background-size: 200% auto;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: gradientShift 3s linear infinite;
-    position: relative;
-    z-index: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #F7C425;
+    width: 100%;
+    animation: typing 2.5s steps(40, end) forwards, blinkCursor 0.8s infinite;
 }
 
-/* Animacija pomaka gradienta */
-@keyframes gradientShift {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
+@keyframes blinkCursor {
+    from { border-color: transparent; }
+    to { border-color: #F7C425; }
 }
 
-/* Header s animacijom spuštanja */
+/* Header animation */
 header {
     display: flex;
     justify-content: space-between;
@@ -61,8 +61,6 @@ header {
     padding: 20px 50px;
     background-color: rgba(0, 0, 0, 0.7);
     animation: slideDown 1.5s ease-in-out;
-    position: relative;
-    z-index: 2;
 }
 
 @keyframes slideDown {
@@ -70,7 +68,7 @@ header {
     to { transform: translateY(0); opacity: 1; }
 }
 
-/* Navigacija s efektom ispod teksta */
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -78,7 +76,7 @@ nav ul {
 }
 
 nav ul li {
-    position: relative;
+    display: inline;
 }
 
 nav ul li a {
@@ -86,41 +84,25 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 400;
-    padding: 5px 0;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: -2px;
-    background-color: #FFEA70;
-    transition: width 0.3s ease-in-out;
+    transition: 0.3s;
+    position: relative;
 }
 
 nav ul li a:hover {
     color: #FFEA70;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-/* Projects grid */
+/* Projects hover effect */
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
     margin-top: 40px;
-    position: relative;
-    z-index: 2;
 }
 
-/* Moderni animirani project card */
 .project {
     width: 45%;
     background: rgba(0, 0, 0, 0.7);
@@ -128,49 +110,34 @@ nav ul li a:hover::after {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(247, 196, 37, 0.5);
     text-align: left;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transform: translateY(20px);
-    opacity: 0;
-    animation: cardFadeIn 0.8s forwards;
-}
-
-/* Odgoda animacije za projektne kartice */
-.project:nth-child(1) { animation-delay: 0.3s; }
-.project:nth-child(2) { animation-delay: 0.5s; }
-.project:nth-child(3) { animation-delay: 0.7s; }
-.project:nth-child(4) { animation-delay: 0.9s; }
-
-@keyframes cardFadeIn {
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    transition: 0.3s ease-in-out;
+    transform: scale(1);
 }
 
 .project:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: scale(1.05);
     box-shadow: 0px 0px 20px rgba(247, 196, 37, 0.8);
 }
 
-/* Gumbi s modernim gradient efektom */
+/* Button animation */
 .project a {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background: linear-gradient(45deg, #F7C425, #FFEA70);
+    background-color: #F7C425;
     color: black;
     text-decoration: none;
     font-weight: 700;
     border-radius: 5px;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: 0.3s ease-in-out;
 }
 
 .project a:hover {
+    background-color: #FFEA70;
     transform: scale(1.1);
-    background: linear-gradient(45deg, #FFEA70, #F7C425);
 }
 
-/* Responsive dizajn */
+/* Responsive */
 @media (max-width: 768px) {
     .projects-grid {
         flex-direction: column;
