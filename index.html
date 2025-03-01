@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,38 @@
             background-color: #000;
             color: #F7C425;
             text-align: center;
-            padding: 50px 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #F7C425;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FFEA70;
+        }
+        .container {
+            padding: 100px 20px;
         }
         h1 {
             font-size: 48px;
@@ -51,9 +82,26 @@
     </style>
 </head>
 <body>
-    <h1>Ognjen Mičić</h1>
-    <h2>Frontend & WordPress Developer</h2>
-    <p>Bavim se izradom web sajtova, web prodavnica, SEO optimizacijom, e-commerce projektima i web aplikacijama.</p>
-    <a href="#" class="btn">Kontaktiraj me</a>
+
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Ognjen Mičić</h1>
+        <h2>Frontend & WordPress Developer</h2>
+        <p>I specialize in website development, online stores, SEO optimization, e-commerce projects, and web applications.</p>
+        <a href="#" class="btn">Contact Me</a>
+    </div>
+
 </body>
 </html>
+
