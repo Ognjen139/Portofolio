@@ -1,123 +1,206 @@
 <?php
-// index.php - PHP datoteka koja ispisuje HTML s responzivnim hamburger menijem
+// index.php
 ?>
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger Menu</title>
-    <style>
-        /* Globalni stilovi */
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-        }
-        
-        /* Kontejner navigacije */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        /* Navigacijski linkovi (desktop) */
-        .navbar .menu a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        
-        .navbar .menu a:hover {
-            background-color: #ddd;
-            color: #333;
-        }
-        
-        /* Hamburger ikona */
-        .hamburger {
-            display: none;
-            float: right;
-            padding: 14px 16px;
-            cursor: pointer;
-        }
-        
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background-color: #f2f2f2;
-            margin: 5px 0;
-        }
-        
-        /* Padajući meni (mobilni) */
-        .dropdown {
-            display: none;
-            flex-direction: column;
-            background-color: #333;
-        }
-        
-        .dropdown a {
-            text-align: left;
-            padding: 14px 16px;
-            border-top: 1px solid #444;
-            color: #f2f2f2;
-            text-decoration: none;
-        }
-        
-        .dropdown a:hover {
-            background-color: #ddd;
-            color: #333;
-        }
-        
-        /* Responsivnost: sakrij desktop meni i prikaži hamburger na manjim ekranima */
-        @media screen and (max-width: 768px) {
-            .navbar .menu {
-                display: none;
-            }
-            .hamburger {
-                display: block;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ognjen Mičić - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #F7C425;
+      text-align: center;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Blago zatamnjivanje */
+      z-index: 1;
+    }
+    header, .container {
+      position: relative;
+      z-index: 2;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .profile-pic {
+      width: 90px;
+      height: 135px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+    nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    /* Desktop meni */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #F7C425;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #FFEA70;
+    }
+    /* Hamburger ikona */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #F7C425;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+    /* Mobile padajući meni */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 70px; /* ispod headera */
+      right: 50px;
+      width: 200px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .mobile-menu a {
+      padding: 12px 16px;
+      border-bottom: 1px solid #444;
+      color: #F7C425;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .mobile-menu a:hover {
+      background-color: #FFEA70;
+      color: #333;
+    }
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+    /* Responsive: na manjim ekranima sakrij desktop meni i prikaži hamburger */
+    @media screen and (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+    /* Ostali stilovi */
+    .container {
+      padding: 100px 20px;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 28px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+    p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #F7C425;
+      color: #000;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background-color: #FFEA70;
+    }
+  </style>
 </head>
 <body>
-    <div class="navbar">
-        <!-- Hamburger ikona koja se prikazuje na mobilnim uređajima -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        
-        <!-- Standardni meni za desktop -->
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">O nama</a>
-            <a href="#">Usluge</a>
-            <a href="#">Kontakt</a>
-        </div>
-        
-        <!-- Padajući meni za mobilne uređaje -->
-        <div class="dropdown" id="dropdownMenu">
-            <a href="#">Home</a>
-            <a href="#">O nama</a>
-            <a href="#">Usluge</a>
-            <a href="#">Kontakt</a>
-        </div>
-    </div>
-    
-    <script>
-        // Funkcija za otvaranje/zatvaranje padajućeg menija
-        function toggleMenu() {
-            var dropdown = document.getElementById("dropdownMenu");
-            if (dropdown.style.display === "flex") {
-                dropdown.style.display = "none";
-            } else {
-                dropdown.style.display = "flex";
-            }
-        }
-    </script>
+  <header>
+    <img src="about_me_190x286.jpg" alt="Ognjen Mičić" class="profile-pic">
+    <nav>
+      <!-- Desktop navigacija -->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <!-- Hamburger ikona (prikazuje se samo na mobilnim uređajima) -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Mobile padajući meni -->
+      <div id="mobileMenu" class="mobile-menu">
+        <a href="#">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Ognjen Mičić</h1>
+    <h2>Frontend & WordPress Developer</h2>
+    <p>I specialize in website development, online stores, SEO optimization, e-commerce projects, and web applications.</p>
+    <a href="#" class="btn">Contact Me</a>
+  </div>
+
+  <script>
+    // Funkcija za otvaranje/zatvaranje mobilnog menija
+    function toggleMenu() {
+      var menu = document.getElementById("mobileMenu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+  </script>
 </body>
 </html>
+
