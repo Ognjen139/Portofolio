@@ -30,7 +30,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Blago zatamnjivanje */
+      background: rgba(0, 0, 0, 0.5); /* lagano zatamnjivanje */
       z-index: 1;
     }
     header, .container {
@@ -50,12 +50,7 @@
       border-radius: 5px;
       object-fit: cover;
     }
-    nav {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-    /* Desktop meni */
+    /* Desktop navigacija */
     nav ul {
       list-style: none;
       display: flex;
@@ -71,12 +66,11 @@
     nav ul li a:hover {
       color: #FFEA70;
     }
-    /* Hamburger ikona */
+    /* Hamburger ikona (sakrivena na desktopu) */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      margin-left: 20px;
     }
     .hamburger span {
       width: 25px;
@@ -111,7 +105,7 @@
     .mobile-menu a:last-child {
       border-bottom: none;
     }
-    /* Responsive: na manjim ekranima sakrij desktop meni i prikaži hamburger */
+    /* Responsivnost: sakrij desktop navigaciju i prikaži hamburger na manjim ekranima */
     @media screen and (max-width: 768px) {
       nav ul {
         display: none;
@@ -120,7 +114,6 @@
         display: flex;
       }
     }
-    /* Ostali stilovi */
     .container {
       padding: 100px 20px;
     }
@@ -174,7 +167,7 @@
         <span></span>
       </div>
       <!-- Mobile padajući meni -->
-      <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu" id="mobileMenu">
         <a href="#">Home</a>
         <a href="about.html">About Me</a>
         <a href="projects.html">Projects</a>
@@ -203,4 +196,5 @@
   </script>
 </body>
 </html>
+
 
