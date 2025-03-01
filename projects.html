@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Ognjen Mičić</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #F7C425;
+            text-align: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Zatamnjivanje pozadine */
+            z-index: 1;
+        }
+        header, .container {
+            position: relative;
+            z-index: 2;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #F7C425;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FFEA70;
+        }
+        .container {
+            padding: 80px 20px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .project {
+            width: 45%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(247, 196, 37, 0.5);
+            text-align: left;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .project h2 {
+            font-size: 24px;
+            margin: 15px 0;
+            color: #FFEA70;
+        }
+        .project p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #F7C425;
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .project a:hover {
+            background-color: #FFEA70;
+        }
+        @media (max-width: 768px) {
+            .projects-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>My Projects</h1>
+        <div class="projects-grid">
+            <!-- Project 1: GamaBox -->
+            <div class="project">
+                <img src="gamabox.png" alt="GamaBox Project">
+                <h2>GamaBox - Advanced WooCommerce Shop</h2>
+                <p>🚀 E-commerce Website Development 🚀</p>
+                <p>• Full Web Shop Creation with a modern and responsive design</p>
+                <p>• Custom WordPress Website Design optimized for UX/UI</p>
+                <p>• SEO Optimization for better search engine rankings</p>
+                <p>• Mobile-Friendly & Fast-Loading responsive layout</p>
+                <p>• Product Entry (1500 items) with proper categorization</p>
+                <p>• Secure & Scalable WooCommerce Setup</p>
+                <p>A high-performance online store designed for conversions and a seamless shopping experience. 💼✨</p>
+                <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>
+            </div>
+
+            <!-- Placeholder za buduće projekte -->
+            <div class="project">
+                <h2>Coming Soon...</h2>
+                <p>Add your next project here!</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
