@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ognjen Mičić</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #F7C425;
+            text-align: center;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Zatamnjivanje pozadine */
+            z-index: 1;
+        }
+        header, .container {
+            position: relative;
+            z-index: 2;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .profile-pic {
+            width: 60px;
+            height: 90px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #F7C425;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #FFEA70;
+        }
+        .container {
+            padding: 100px 20px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .about-content {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+        }
+        ul {
+            margin-top: 15px;
+            text-align: left;
+            list-style: none;
+        }
+        ul li {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .highlight {
+            font-weight: 700;
+            color: #FFEA70;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="about_me_190x286.jpg" alt="Ognjen Mičić" class="profile-pic">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>About Me</h1>
+        <p class="highlight">Frontend & WordPress Developer</p>
+
+        <div class="about-content">
+            <p>✔ 8 years of web design and website development</p>
+            <p>✔ 120+ clients worldwide</p>
+            <p>✔ UI/UX</p>
+            <p>✔ Over 250 projects</p>
+
+            <p class="highlight">👇👇👇 LOOK DOWN 👇👇👇</p>
+            <ul>
+                <li>- Design & Redesign websites</li>
+                <li>- Languages: HTML, PHP, CSS, Node.js</li>
+                <li>- WordPress Professional</li>
+                <li>- Ecommerce development: WooCommerce, Shopify</li>
+                <li>- SEO & Website Optimization</li>
+                <li>- Google Ads & Online Marketing</li>
+                <li>- Content Marketing</li>
+                <li>- Graphic Design & Corporate Identity</li>
+                <li>- Logo Design & Business Card Design</li>
+                <li>- Hosting, Migrations & Domains</li>
+                <li>- Image and Video Editing & Optimization</li>
+                <li>- SSL/TLS Certificates (Website Security)</li>
+            </ul>
+
+            <p>I am a Sarajevo-based web developer and designer with <span class="highlight">8 years of experience</span>, specializing in high-quality <span class="highlight">Shopify & WordPress development</span>.</p>
+            <p>For the previous 3 years, I worked in a company that provides <span class="highlight">hosting services</span> in Bosnia and Herzegovina. I have extensive experience in creating and designing websites, creating databases, editing videos and photos, and much more.</p>
+        </div>
+    </div>
+
+</body>
+</html>
