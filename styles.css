@@ -147,23 +147,23 @@ nav ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
+    margin-top: 40px;
 }
 
 .project {
-    width: calc(50% - 20px); /* Dve kolone sa malim razmakom */
+    flex: 1 1 calc(50% - 40px); /* Dve kolone, smanjuje se sa ekranom */
+    max-width: 500px; /* Sprečava previše rastezanja */
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(247, 196, 37, 0.5);
     text-align: left;
-    transition: 0.3s ease-in-out;
-    transform: scale(1);
 }
 
-/* Na telefonima i dalje dva u redu */
-@media (max-width: 400px) {
+/* Prikaz jednog po jednog projekta na mobilnim uređajima */
+@media (max-width: 768px) {
     .project {
-        width: 100%;
+        flex: 1 1 100%; /* Prikazuje po jedan projekat */
     }
 }
