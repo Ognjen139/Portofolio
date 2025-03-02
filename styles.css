@@ -145,3 +145,44 @@ nav ul li a:hover {
     }
 }
 
+.mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Menu is hidden by default */
+}
+
+.mobile-menu.active ul {
+  display: block; /* Display the menu when active */
+}
+
+.mobile-menu ul li {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInUp 0.5s forwards;
+  animation-delay: calc(0.2s * var(--i)); /* Delay each item */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* To control the delay for each item */
+.mobile-menu ul li:nth-child(1) {
+  --i: 1;
+}
+
+.mobile-menu ul li:nth-child(2) {
+  --i: 2;
+}
+
+.mobile-menu ul li:nth-child(3) {
+  --i: 3;
+}
+
+.mobile-menu ul li:nth-child(4) {
+  --i: 4;
+}
