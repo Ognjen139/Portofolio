@@ -68,7 +68,7 @@
         .container {
             padding: 80px 20px;
         }
-        h6 {
+        h1 {
             font-size: 38px;
             font-weight: 700;
         }
@@ -89,7 +89,7 @@
             width: 100%;
             border-radius: 10px;
         }
-        .project h2 {
+        .project h4 {
             font-size: 20px;
             margin: 15px 0;
             color: #fbfe0d;
@@ -113,11 +113,14 @@
             background-color: #fbfe0d;
         }
 
-        /* Media Query for Mobile Devices */
+        /* Media Query za mobilne uređaje */
         @media (max-width: 768px) {
             .projects-grid {
                 grid-template-columns: repeat(2, 1fr); /* Dve kolone za mobilne uređaje */
                 gap: 20px;
+            }
+            .project h4 {
+                font-size: 18px; /* Manji font za naslove na mobilnim uređajima */
             }
         }
     </style>
@@ -177,6 +180,6 @@
             </div>
         </div>
     </div>
-<style>
+
 </body>
 </html>
