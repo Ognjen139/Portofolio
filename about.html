@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Ognjen Mičić</title>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -65,6 +65,51 @@
         nav ul li a:hover {
             color: #fbfe0d;
         }
+        /* Dodato za mobilni meni */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fbfe0d;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #000;
+            position: absolute;
+            top: 60px; /* ispod headera */
+            right: 10px;
+            width: 200px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .mobile-menu a {
+            padding: 12px 16px;
+            border-bottom: 1px solid #444;
+            color: #fbfe0d;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mobile-menu a:hover {
+            background-color: #fbfe0d;
+            color: #333;
+        }
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        /* Kraj dodatka za mobilni meni */
         .container {
             padding: 100px 20px;
         }
@@ -105,6 +150,19 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <!-- Hamburger ikona za mobilne uređaje -->
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Mobilni padajući meni -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -117,7 +175,7 @@
             <p>✔ 120+ clients worldwide</p>
             <p>✔ UI/UX</p>
             <p>✔ Over 250 projects</p>
-<br>
+            <br>
             <p class="highlight">👇👇👇 LOOK DOWN 👇👇👇</p>
             <ul>
                 <li>- Design & Redesign websites</li>
@@ -133,11 +191,22 @@
                 <li>- Image and Video Editing & Optimization</li>
                 <li>- SSL/TLS Certificates (Website Security)</li>
             </ul>
-<br>
+            <br>
             <p>I am a Sarajevo-based web developer and designer with <span class="highlight">8 years of experience</span>, specializing in high-quality <span class="highlight">Shopify & WordPress development</span>.</p>
             <p>For the previous 3 years, I worked in a company that provides <span class="highlight">hosting services</span> in Bosnia and Herzegovina. I have extensive experience in creating and designing websites, creating databases, editing videos and photos, and much more.</p>
         </div>
     </div>
+
+    <script>
+        function toggleMobileMenu() {
+            var menu = document.getElementById("mobileMenu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
 
 </body>
 </html>
