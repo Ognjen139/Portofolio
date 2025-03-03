@@ -105,77 +105,7 @@
     .mobile-menu a:last-child {
       border-bottom: none;
     }
-    /* Responsive: sakrij desktop navigaciju i prikaži hamburger na manjim ekranima */
-    @media screen and (max-width: 768px) {
-      nav ul {
-        display: none;
-      }
-      .hamburger {
-        display: flex;
-      }
-    }
-    .container {
-      padding: 100px 20px;
-    }
-    h1 {
-      font-size: 48px;
-      font-weight: 700;
-    }
-    h2 {
-      font-size: 28px;
-      font-weight: 400;
-      margin-top: 10px;
-    }
-    p {
-      font-size: 18px;
-      max-width: 600px;
-      margin: 20px auto;
-      line-height: 1.6;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #fbfe0d;
-      color: #000;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 700;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background-color: #fbfe0d;
-    }
-  </style>
-</head>
-<body>
 
-  <header>
-    <img src="about_me_190x286.jpg" alt="Ognjen Mičić" class="profile-pic">
-    <nav>
-      <!-- Desktop navigacija -->
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <!-- Hamburger ikona (prikazuje se samo na mobilnim uređajima) -->
-      <div class="hamburger" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <!-- Mobile padajući meni -->
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
         .container {
             padding: 80px 20px;
         }
