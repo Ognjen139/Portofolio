@@ -226,3 +226,8 @@ nav ul li a:hover {
         display: flex;
     }
 }
+@media (max-width: 768px) {
+    .project h2 {
+        font-size: 18px; /* Manji font za naslove na mobilnim uređajima */
+    }
+}
