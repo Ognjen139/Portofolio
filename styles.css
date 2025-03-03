@@ -226,16 +226,3 @@ nav ul li a:hover {
         display: flex;
     }
 }
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tri kolone za desktop */
-    gap: 40px;
-    margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr); /* Dve kolone za mobilne uređaje */
-        gap: 20px;
-    }
-}
