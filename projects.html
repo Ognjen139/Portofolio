@@ -65,28 +65,45 @@
         nav ul li a:hover {
             color: #fbfe0d;
         }
-              <!-- Desktop navigacija -->
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <!-- Hamburger ikona (prikazuje se samo na mobilnim uređajima) -->
-      <div class="hamburger" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <!-- Mobile padajući meni -->
-      <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+       /* Hamburger ikona (sakrivena na desktopu) */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background-color: #fbfe0d;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+    /* Mobile padajući meni */
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background-color:#000000;
+      position: absolute;
+      top: -60px; /* ispod headera */
+      right: -50px;
+      width: 200px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .mobile-menu a {
+      padding: 12px 16px;
+      border-bottom: 1px solid #444;
+      color: #fbfe0d;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .mobile-menu a:hover {
+      background-color: #fbfe0d;
+      color: #333;
+    }
+    .mobile-menu a:last-child {
+      border-bottom: none;
         .container {
             padding: 80px 20px;
         }
