@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Ognjen Mičić</title>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -42,11 +42,11 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
         .profile-pic {
-      width: 90px;
-      height: 135px;
-      border-radius: 5px;
-      object-fit: cover;
-    }
+            width: 90px;
+            height: 135px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
         nav ul {
             list-style: none;
             display: flex;
@@ -73,14 +73,12 @@
             font-weight: 700;
         }
         .projects-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Tri kolone za desktop */
             gap: 40px;
             margin-top: 40px;
         }
         .project {
-            width: 45%;
             background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             border-radius: 10px;
@@ -114,13 +112,12 @@
         .project a:hover {
             background-color: #fbfe0d;
         }
+
+        /* Media Query for Mobile Devices */
         @media (max-width: 768px) {
             .projects-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            .project {
-                width: 90%;
+                grid-template-columns: repeat(2, 1fr); /* Dve kolone za mobilne uređaje */
+                gap: 20px;
             }
         }
     </style>
@@ -148,36 +145,38 @@
                 <h2>GamaBox - Advanced WooCommerce Shop</h2>
                 <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>
             </div>
-              <!-- Project 2: Tehnob -->
+            <!-- Project 2: Tehnob -->
             <div class="project">
                 <img src="tehnob.png" alt="Tehnob Project">
                 <h2>Tehnob - Modern & Responsive E-commerce Website</h2>
                 <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>
             </div>
-             <!-- Project 3: AlphaPressBH -->
+            <!-- Project 3: AlphaPressBH -->
             <div class="project">
                 <img src="alphapressbh.png" alt="AlphaPressBH Project">
                 <h2>AlphaPressBH - Custom WordPress Website – SEO, UX/UI & Fully Responsive</h2>
                 <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>
             </div>
-   <!-- Project 4: IMT Group -->
+            <!-- Project 4: IMT Group -->
             <div class="project">
                 <img src="imtgroup.png" alt="IMT Group Project">
                 <h2>IMT Group - Handcrafted WordPress Website – Clean Code & SEO Optimized</h2>
-                <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>        </div>
-        <!-- Project 5: Srbosfera -->
+                <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>
+            </div>
+            <!-- Project 5: Srbosfera -->
             <div class="project">
                 <img src="srbosfera.png" alt="Srbosfera Project">
                 <h2>Srbosfera - Patriotic E-commerce Store – WordPress, UX/UI & Fast Performance</h2>
                 <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>
             </div>
-   <!-- Project 6: Bautronix -->
+            <!-- Project 6: Bautronix -->
             <div class="project">
                 <img src="bautronix.png" alt="Bautronix Project">
                 <h2>Bautronix - Professional WordPress E-commerce Store – Sleek & Responsive Design</h2>
-                <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>        </div>
-    </div>
+                <a href="https://www.gamabox.shop" target="_blank">Visit Website</a>
+            </div>
         </div>
+    </div>
 
 </body>
 </html>
