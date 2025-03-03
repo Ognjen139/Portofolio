@@ -65,7 +65,51 @@
         nav ul li a:hover {
             color: #fbfe0d;
         }
-     
+        /* Dodato za mobilni meni */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #fbfe0d;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #000;
+            position: absolute;
+            top: 60px; /* ispod headera */
+            right: 10px;
+            width: 200px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .mobile-menu a {
+            padding: 12px 16px;
+            border-bottom: 1px solid #444;
+            color: #fbfe0d;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mobile-menu a:hover {
+            background-color: #fbfe0d;
+            color: #333;
+        }
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+        /* Kraj dodanog dela za mobilni meni */
         .container {
             padding: 80px 20px;
         }
@@ -113,20 +157,19 @@
         .project a:hover {
             background-color: #fbfe0d;
         }
-
-       /* Media Query za mobilne uređaje */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(1, 1fr); /* Dve kolone za mobilne uređaje */
-        gap: 10px;
-    }
-    .project h4 {
-        font-size: 20px; /* Manji font za naslove na mobilnim uređajima */
-    }
-    .project p {
-        font-size: 13px; /* Manji font za opis projekata na mobilnim uređajima */
-    }
-}
+        /* Media Query za mobilne uređaje */
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(1, 1fr); /* Jedna kolona za mobilne uređaje */
+                gap: 10px;
+            }
+            .project h4 {
+                font-size: 20px; /* Manji font za naslove na mobilnim uređajima */
+            }
+            .project p {
+                font-size: 13px; /* Manji font za opis projekata na mobilnim uređajima */
+            }
+        }
     </style>
 </head>
 <body>
@@ -140,6 +183,19 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <!-- Hamburger ikona za mobilne uređaje -->
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Mobilni padajući meni -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -190,6 +246,17 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleMobileMenu() {
+            var menu = document.getElementById("mobileMenu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
 
 </body>
 </html>
