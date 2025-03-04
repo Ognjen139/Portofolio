@@ -227,3 +227,38 @@ nav ul li a:hover {
         display: flex;
     }
 }
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skill {
+    text-align: center;
+    position: relative;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__background,
+.progress-ring__circle {
+    fill: none;
+    stroke-width: 8;
+    cx: 60;
+    cy: 60;
+    r: 50;
+}
+
+.progress-ring__background {
+    stroke: #444;
+}
+
+.progress-ring__circle {
+    stroke: #F7C425;
+    stroke-dasharray: 314; /* Obim kruga (2 * PI * r) */
+    stroke-dashoffset: 314;
+    transition: stroke-dashoffset 1.5s ease-in-out;
+}
