@@ -257,6 +257,7 @@ nav ul li a:hover {
     cx: 60;
     cy: 60;
     r: 50;
+    stroke-linecap: round; /* Zaobljeni krajevi */
 }
 
 .progress-ring__background {
@@ -265,7 +266,7 @@ nav ul li a:hover {
 
 .progress-ring__circle {
     stroke: #F7C425;
-    stroke-dasharray: 314; /* Popravljeno: 2 * PI * 50 */
+    stroke-dasharray: 314;
     stroke-dashoffset: 314;
     transition: stroke-dashoffset 1.5s ease-in-out;
 }
