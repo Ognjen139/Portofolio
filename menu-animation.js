@@ -27,18 +27,18 @@
       transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* Mobilni meni: slide/fade in efekt */
-    .mobile-menu {
-      display: none;
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .mobile-menu.active {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
-    }
+.mobile-menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.mobile-menu.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
   `;
 
   var styleEl = document.createElement('style');
