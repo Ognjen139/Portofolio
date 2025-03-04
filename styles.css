@@ -156,6 +156,7 @@ nav ul li a:hover {
     width: 200px;
     border-radius: 5px;
     overflow: hidden;
+    z-index: 100
 }
 
 .mobile-menu.active {
