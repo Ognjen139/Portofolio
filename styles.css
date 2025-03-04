@@ -234,6 +234,13 @@ nav ul li a:hover {
     margin-top: 50px;
 }
 
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
 .skill {
     text-align: center;
     position: relative;
@@ -253,12 +260,12 @@ nav ul li a:hover {
 }
 
 .progress-ring__background {
-    stroke: #444;
+    stroke: #222;
 }
 
 .progress-ring__circle {
     stroke: #F7C425;
-    stroke-dasharray: 314; /* Obim kruga (2 * PI * r) */
+    stroke-dasharray: 314; /* Popravljeno: 2 * PI * 50 */
     stroke-dashoffset: 314;
     transition: stroke-dashoffset 1.5s ease-in-out;
 }
